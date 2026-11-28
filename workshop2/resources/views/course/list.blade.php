@@ -26,12 +26,9 @@
                     <td>{{ number_format($course->fee, 2) }}</td>
                     <td>{{ $course->difficulty }}</td>
                     <td>{{ $course->is_active ? 'Yes' : 'No' }}</td>
-
                     <td>
                         <a href="{{ route('courses.show', $course) }}">View</a>
-
                         <a href="{{ route('courses.edit', $course) }}">Edit</a>
-
                         <x-delete-form :action="route('courses.destroy', $course)" />
                     </td>
                 </tr>
